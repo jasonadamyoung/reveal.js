@@ -51,14 +51,14 @@
 				</section>
 
 				<section>
-					<h2>Breaking the first rule of Sysadmin Club</h2>
+					<h2>Breaking the first rule<br/>of Sysadmin Club</h2>
 				</section>
 
 				<section data-background-transition="linear"  data-background="images/elinor_peace.jpg">
 				</section>
 
 				<section>
-					<h2>Who</h2>
+					<h1>Who</h1>
 				</section>
 
 				<section>
@@ -96,8 +96,24 @@
 
 				<section>
 					<h2>The Project @ NC State</h2>
-					<p>All of the infrastructure hosting, except Moodle, Adobe Connect</p>
-					<p>Primary technical contact for everything except Moodle, Adobe Connect, iOS apps, the Drupal-based CMS, and the multi-user wordpress site</p>
+					<ul>
+						<li class="fragment">All of the infrastructure hosting
+							<ul>
+								<li class="fragment">...except Moodle, Adobe Connect</li>
+							</ul>
+						</li>
+						<li class="fragment">Primary technical contact for everything
+							<ul>
+								<li class="fragment">...except Moodle, Adobe Connect</li>
+								<li class="fragment">...Drupal and Multi-site Wordpress are shared</li>
+								<li class="fragment">...iOS app development</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The People @ NC State</h2>										
 					<ul>
 						<li>UI Designer</li>
 						<li>Software Developer</li>
@@ -130,7 +146,7 @@
 				</section>
 
 				<section>
-					<h2>Why</h2>
+					<h1>Why</h1>
 				</section>
 
 				<section>
@@ -141,10 +157,6 @@
 				</section>
 
 				<section>
-					<h2>Huh?</h2>		
-				</section>
-
-				<section>
 					<h2>The Mission</h2>
 					<p>eXtension is a national internet-based educational network that is integral to and complements the community-based Cooperative Extension System with 24/7/365 availability.</p>
 					<p>– <a href="http://create.extension.org/node/2017">Mission, Vision, Values and Guiding Principles</a></p>	
@@ -152,9 +164,9 @@
 
 				<section>
 					<h2>The "Users"</h2>
-					<p class="fragment">~16,910 internal accounts: ~1,925 (12%) logging in in last 30 days.</p>
-					<p class="fragment">~38,000 public "emails" on Q&amp;A site in last year</p>
-					<p class="fragment">~175,000 (GA "unique") visitors a month to public content site</p>		
+					<p class="fragment">~<strong>16,910</strong> internal accounts:<br/> ~<strong>1,925</strong> (12%) logging in in last 30 days.</p>
+					<p class="fragment">~<strong>38,000</strong> public "emails" on Q&amp;A site in last year</p>
+					<p class="fragment">~<strong>175,000</strong> (GA "unique") visitors a month to primary public content site (<a href="http://www.extension.org">www.extension.org</a>)</p>		
 				</section>
 
 
@@ -180,16 +192,14 @@
 					</ul>
 				</section>
 
-				<section>
-					<h2>Your biggest threat to your infrastructure...</h2>
-				</section>
 
 				<section>
-					<h2>... is a Self Denial of Service Attack</h2>
-				</section>
+					<h2>Spoiler Alert</h2>
+					<p class="fragment">That identify the problem thing? <span class="fragment"><em>I blew it</em></p>
+				</section>				
 
 				<section>
-					<h2>We have Web Apps/h2>
+					<h2>We have Web Apps</h2>
 					<p><a href="http://create.extension.org/node/2036">eXtension Websites</a></p>		
 
 					<ul>
@@ -222,20 +232,89 @@
 				</section>	
 
 				<section>
-					<h2>What</h2>
+					<h1>What</h1>
 				</section>
 
 
 				<section>
 					<h2>The Apps</h2>
 					<ul>
-						<li>Drupal</li>
-						<li>Wordpress</li>
-						<li>Mediawiki</li>
-						<li>Custom Ruby on Rails</li>
+						<li class="fragment">Drupal</li>
+						<li class="fragment">Wordpress</li>
+						<li class="fragment">Mediawiki</li>
+						<li class="fragment">Custom Ruby on Rails</li>
 					</ul>
-					<p>All open (and open source*): <a href="http://github.com/extension">http://github.com/extension</a></p>
-					<p><small><em>* No one cares</em></small</p>
+				</section>
+
+				<section>
+					<h2>Identity Management</h2>
+					<ul>
+						<li class="fragment">Replicated accounts (and groups)</li>
+						<li class="fragment">Auth is OpenID (except for Google)</li>
+						<li class="fragment">Runtime SHA1 passed to Google</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The internal services</h2>
+					<ul>
+						<li class="fragment">Apache (with PHP and Ruby/Phusion Passenger)</li>
+						<li class="fragment">Single-master MySQL (33GB total, 13.2GB is "production")</li>
+						<li class="fragment">Redis, Memcached, and Solr</li>
+						<li class="fragment">Postfix (Lots of forwarding)</li>
+						<li class="fragment">NTP</li>
+						<li class="fragment">DNS: Internal VPN hosts BIND</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>The external services</h2>
+					<ul>
+						<li class="fragment">Github</li>
+						<li class="fragment">Scout, Pingdom, and Pagerduty</li>
+						<li class="fragment">DNS Made Easy</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>The servers</h2>
+					<ul>
+						<li class="fragment">Ubuntu LTS 10.04 and 12.04</li>
+						<li class="fragment">All VM's running on VMWare Vsphere 5.1</li>
+						<li class="fragment">Three Dell R620's and 1 ???</li>
+						<li class="fragment">EqualLogic PS6110XV SAN</li>
+						<li class="fragment">Hosted at MCNC</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What's Changed?</h2>
+					<ul>
+						<li class="fragment">Switch to VM's</li>
+						<li class="fragment">RHEL to Ubuntu</li>
+						<li class="fragment">Framework upgrades</li>
+					</ul>
+				</section>
+ 
+
+				<section>
+					<h1>How</h1>
+				</section>
+
+				<section>
+					<h2>Structured Development Process</h2>
+					<p>All code is under source control - using Git</p>
+					<p>Local development with <em>similar</em> software configuration using production data copies</p>
+					<p>Most applications have a "demo" or "dev" server (with a copy of production data)</p>
+					<p>Deployments are controlled (and can roll back)</p>
+				</section>						
+
+				<section>
+					<h2>Open Development Process</h2>
+					<p>Open Source: <a href="http://github.com/extension">http://github.com/extension</a></p>
+					<p>Open Deployment: <a href="http://engineering.extension.org">http://engineering.extension.org</a></p>
+					<p>"Almost Open" project todos using <a href="https://basecamp.com/">Basecamp</a></p>
 				</section>
 
 				<section>
@@ -243,57 +322,26 @@
 				</section>
 
 				<section>
-					<h2>Identity Management</h2>
+					<h2>Your biggest threat<br/>to your infrastructure...</h2>
+				</section>
+
+				<section>
+					<h2>... is a Self Denial of Service Attack</h2>
+				</section>
+
+				<section>
+					<h2>Structured "DevOps" Process<br/>(In process)</h2>
 					<ul>
-						<li>Replicated accounts</li>
-						<li>Auth is OpenID (except for Google)</li>
-						<li>Runtime SHA1 passed to Google</li>
+					<li class="fragment">Historically: SVN (now Git) - backed configuration</li>
+					<li class="fragment">Currently implementing Puppet Enterprise (and a smidge of Ansible)
+						<ul>
+							<li class="fragment">Local vagrant-based VM for development</li>
+							<li class="fragment">Git-based push for different environments + librarian-puppet in a Git post-commit hook</li>
+							<li class="fragment">Goal: "Full Demo" environment (to begin to better test infrastructure changes)</li>
+						</ul>
+					</li>
 					</ul>
 				</section>
-
-				<section>
-					<h2>The services</h2>
-					<ul>
-						<li>Apache (with PHP and Ruby/Phusion Passenger)</li>
-						<li>Single-master MySQL (33GB total, 13.2GB is "production")</li>
-						<li>Redis, Memcached, and Solr</li>
-						<li>Postfix (Lots of forwarding)</li>
-						<li>NTP</li>
-						<li>DNS: Internal BIND - and DNS Made Easy</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>The servers</h2>
-					<ul>
-						<li>Ubuntu LTS 10.04 and 12.04</li>
-						<li>All VM's running on VMWare Vsphere 5.1</li>
-						<li>Three Dell R620's and 1 ???</li>
-						<li>EqualLogic PS6110XV SAN</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>What's Changed?</h2>
-					<ul>
-						<li>Switch to VM's</li>
-						<li>RHEL to Ubuntu</li>
-						<li>Framework upgrades</li>
-						<li>SVN config exports (+ bespoke servers) to Puppet Enterprise (and some Ansible)</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>If it ain't broke, break it</h2>
-				</section>
-
-
-				<section>
-					<h2>How</h2>
-				</section>	
-
-
-
 
 				<section>
 					<h2>I'm a Sysadmin</h2>
@@ -313,6 +361,13 @@
 					</section>
 				</section> 
 
+				<section>
+					<h2>We live in incredible times</h2>
+				</section>	
+
+				<section>
+					<h2>Thanks!</h2>
+				</section>	
 
 			</div>
 
